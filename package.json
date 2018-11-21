@@ -1,5 +1,5 @@
 {
-  "name": "mlt-linkedin",
+  "name": "mlt-oauth",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/b0rza/mlt-linkedin.git"
+    "url": "git+https://github.com/b0rza/mlt-oauth.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/b0rza/mlt-linkedin/issues"
+    "url": "https://github.com/b0rza/mlt-oauth/issues"
   },
-  "homepage": "https://github.com/b0rza/mlt-linkedin#readme",
+  "homepage": "https://github.com/b0rza/mlt-oauth#readme",
   "devDependencies": {
     "nodemon": "^1.18.6"
   },
