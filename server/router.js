@@ -7,7 +7,7 @@ const oauth = require('./oauth');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.send('Hello<br><a href="/oauth/auth">Log in with LinkedIn</a>');
+  res.send('Hello<br><a href="/oauth/linkedin/auth">Log in with LinkedIn</a>');
 });
 router.get('/config', (_, res) => res.json(config));
 

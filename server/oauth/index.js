@@ -3,7 +3,7 @@
 const clients = require('./clients');
 const ctrl = require('./oauth.controller');
 const express = require('express');
-const lodash = require('lodash');
+const get = require('lodash/get');
 
 const router = express.Router();
 
