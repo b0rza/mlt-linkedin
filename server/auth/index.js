@@ -1,9 +1,11 @@
 'use strict';
 
 const clients = require('./clients');
-const ctrl = require('./oauth.controller');
+const ctrl = require('./auth.controller');
 const express = require('express');
+const passport = require('passport');
 const get = require('lodash/get');
+const User = require('../user/user.model');
 
 const router = express.Router();
 
@@ -12,12 +14,17 @@ function loadClient(req, _, next) {
   next();
 }
 
+passport.serializeUser((user, done) => done(null, user.id));
+passport.deserializeUser((id, done) =>  {
+  return User.findById(id).then(user => done(null, user));
+});
+
 router
   .param('client', loadClient)
-  .get('/:client/auth', ctrl.authorize)
+  .get('/:client/auth', ctrl.authenticate)
   .get('/:client/cb', ctrl.callback)
 
 module.exports = {
-  path: '/oauth',
+  path: '/auth',
   router
 }
